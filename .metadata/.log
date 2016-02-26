@@ -1,0 +1,28 @@
+!SESSION 2016-02-24 15:13:48.590 -----------------------------------------------
+eclipse.buildId=4.4.2.M20150204-1700
+java.version=1.8.0_40
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product -keyring /Users/tojopjose/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.jee.product -keyring /Users/tojopjose/.eclipse_keyring -showlocation
+
+!ENTRY org.eclipse.core.net 1 0 2016-02-24 15:14:45.572
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2016-02-24 15:15:05.816
+!MESSAGE Starting the AWS toolkit core plugin...
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2016-02-24 15:15:11.864
+!MESSAGE No profile found: default
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2016-02-24 15:15:11.911
+!MESSAGE No profile found: account1
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2016-02-24 15:15:12.040
+!MESSAGE Monitoring content of /Users/tojopjose/.aws/credentials
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2016-02-24 15:15:12.043
+!MESSAGE AWS toolkit core plugin initialized after 6228 milliseconds.
+
+!ENTRY com.amazonaws.eclipse.core 1 0 2016-02-24 15:15:12.148
+!MESSAGE The current accountId is not found in the system. Switching to the default account.

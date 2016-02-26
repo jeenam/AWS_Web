@@ -1,0 +1,53 @@
+<project name="AWS_Web" default="init" basedir=".">
+	<property name="app.name"      value="AWS_Web"/>
+	<property name="app.src"       value="src"/>
+	<property name="app.web"       value="webroot"/>
+	<property name="app.build"     value="build"/>
+	<property name="app.dist"      value="dist"/>
+	<property name="app.lib"       value="WebRoot\WEB-INF\lib"/>
+
+	<path id="compile.classpath">
+		<fileset dir="${app.lib}">
+			<include name="*.jar"/>
+		</fileset>
+	</path>
+
+	<target name="clean">
+		<delete  dir="${app.build}" />
+		<delete  dir="${app.dist}" />
+	</target>
+
+	<target name="init"  depends="clean" >
+		<mkdir  dir="${app.build}" />
+		<mkdir  dir="${app.build}/WEB-INF/classes" />
+		<mkdir  dir="${app.build}/WEB-INF/lib" />
+		<mkdir  dir="${app.dist}" />
+	</target>
+
+	<target name="compile" depends="init" >
+		<javac srcdir="${app.src}"
+              destdir="${app.build}/WEB-INF/classes" debug="true">
+			<classpath refid="compile.classpath"/>
+		</javac>
+	</target>
+
+	<target name="prepare" depends="compile">
+		  <copy todir="${app.build}">
+		    <fileset dir="${app.web}"/>
+		  </copy>
+
+		<copy file="${app.web}/WEB-INF/web.xml" todir="${app.build}/WEB-INF"/>
+		  <copy todir="${app.build}/WEB-INF/lib">
+		    <fileset dir="${app.lib}" excludes="javax.servlet.jar" />
+		  </copy>
+		
+	</target>
+
+	<target name="makewar" depends="prepare">
+		<war basedir="${app.build}" 
+		 	 webxml="${app.web}/WEB-INF/web.xml"	 
+			 destfile="${app.dist}/${app.name}.war">
+			<exclude name="**/web.xml"/>
+		</war>
+	</target>
+</project>
