@@ -18,7 +18,7 @@ public class SnsSender {
 	}
 	
 	public void sendToArn(String message){
-		String topicArn = "###########";
+		String topicArn = "arn:aws:sns:us-east-1:515651501414:animus-contact";
 		AmazonSNSClient snsClient = new AmazonSNSClient();		          
 		snsClient.withRegion(Regions.US_EAST_1);
 	

@@ -80,7 +80,7 @@ public class ContactServlet extends HttpServlet {
 	    		" Email: " + sEmail + " \n " + " Phone: " + sPhoneNo + " \n " + " Company: " + sCompany; 
 	    System.out.println("-------a----");		
 	    SnsSender  snsSender = new SnsSender();
-	    snsSender.sendToArn(sContent);
+        snsSender.sendToArn(sContent);
 	    System.out.println("-------b----");
     }
     
