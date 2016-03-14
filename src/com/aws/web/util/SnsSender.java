@@ -23,7 +23,7 @@ public class SnsSender {
 		snsClient.withRegion(Regions.US_EAST_1);
 	
 		
-		//publish to an SNS topic
+		//publish to an SNS topic dddd
 		String msg = message;
 		PublishRequest publishRequest = new PublishRequest(topicArn, msg);
 		PublishResult publishResult = snsClient.publish(publishRequest);
