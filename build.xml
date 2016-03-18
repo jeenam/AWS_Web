@@ -1,7 +1,7 @@
 <project name="AWS_Web" default="init" basedir=".">
 	<property name="app.name"      value="AWS_Web"/>
 	<property name="app.src"       value="src"/>
-	<property name="app.web"       value="webroot"/>
+	<property name="app.web"       value="WebRoot"/>
 	<property name="app.build"     value="build"/>
 	<property name="app.dist"      value="dist"/>
 	<property name="app.lib"       value="WebRoot\WEB-INF\lib"/>
