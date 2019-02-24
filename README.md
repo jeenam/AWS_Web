@@ -15,3 +15,14 @@ while not check:
 else:
     z = zipfile.ZipFile(io.BytesIO(r.content))
     z.extractall()
+    
+    import yaml
+
+with open("host_data.yaml",'r') as stream :
+  data_loaded = yaml.load(stream)
+
+for element in data_loaded:
+  address=element['gms']['localhost1']['address']
+  username=element['gms']['localhost1']['username']
+  password=element['gms']['localhost1']['password']
+  hostname=element['gms']['localhost1']['hostname']
